@@ -39,14 +39,14 @@
   
   .resume-button {
     padding: 8px 16px;
-    border: 2px solid #00FF00; /* Green border */
+    border: 2px solid #03c4ff; /* Green border */
     border-radius: 4px;
-    color: #00FF00; /* Green text */
+    color: #00FF00a; /* Green text */
     transition: background-color 0.3s ease, color 0.3s ease;
   }
   
   .resume-button:hover {
-    background-color: #00FF00; /* Green background on hover */
+    background-color: #1692cc; /* Green background on hover */
     color: #000000; /* Black text on hover */
   }
   
