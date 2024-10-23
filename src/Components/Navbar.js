@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "../CSS/Navbar.css"; // Import the CSS file
-import Spider from "../spider.png";
 import Logo from "../Logo.png";
 
 const Navbar = () => {
@@ -19,7 +18,7 @@ const Navbar = () => {
     <nav className="navbar">
       {/* Wrap the logo in an anchor tag */}
       <div className="navbar__logo" onClick={handleLinkClick}>
-        <img className="spider" src={Logo} />
+        <img className="spider" src={Logo} alt="LOGO" />
       </div>
 
       {/* Hamburger Menu for Mobile */}
