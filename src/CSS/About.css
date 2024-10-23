@@ -1,93 +1,160 @@
-/* src/About.css */
-
+/* General Container Styling */
 .about-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 40px;
+  display: flex;
+  align-items: flex-start; /* Align items to the top */
+  justify-content: space-between;
+  padding: 40px;
+  margin: 10%;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+/* Left Section */
+.about-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Align the image and heading in the center */
+}
+
+/* Image Styling */
+.about-image {
+  width: 230px;
+  height: auto;
+  border-radius: 50%;
+  animation: fadeIn 1s ease-in;
+  margin-bottom: 10px; /* Add space between image and text */
+}
+
+/* Right Section */
+.about-right {
+  flex: 1;
+  padding-left: 30px;
+  text-align: left;
+  animation: fadeIn 1s ease-in;
+}
+
+/* Heading Styling */
+.about-heading,
+.education h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #1fd2a3;
+  text-align: left; /* Ensure both are aligned on the left */
+}
+
+/* Description Styling */
+.about-description {
+  font-size: 1.1rem;
+  color: #cac7c7;
+  animation: slideIn 1s ease-in;
+  text-align: left;
+  max-width: 500px;
+  line-height: 1.5;
+}
+
+/* Separator Line */
+.separator {
+  height: 550px;
+  width: 2px;
+  background-color: #1fd2a3;
+  margin: 0 30px;
+  animation: grow 1s ease-in;
+}
+
+/* Education Section */
+.education {
+  margin-top: 20px;
+}
+
+.education ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.education li {
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+  line-height: 2;
+  max-width: 500px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-  
-  .about-left {
-    flex: 1;
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes grow {
+  from {
+    height: 0;
+  }
+  to {
+    height: 300px;
+  }
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin-top: 20%;
+  }
+
+  .about-left,
+  .about-right {
+    flex: none;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .separator {
+    height: 2px;
+    width: 100%;
+    margin: 20px 0;
+  }
+
+  .about-heading,
+  .education h3 {
     text-align: center;
   }
-  
-  .about-image {
-    width: 250px; /* Adjust as needed */
-    height: auto;
-    border-radius: 50%; /* For a circular image */
-    animation: fadeIn 1s ease-in; /* Fade-in animation */
-  }
-  
+
   .about-description {
-    margin-top: 20px;
-    font-size: 1.1rem;
-    color: #918989;
-    animation: slideIn 1s ease-in; /* Slide-in animation */
+    max-width: 100%;
+    text-align: center;
   }
-  
-  .separator {
-    height: 300px; /* Adjust height as needed */
-    width: 2px;
-    background-color:  #009baf; /* Line color */
-    margin: 0 30px; /* Space around the line */
-    animation: grow 1s ease-in; /* Line grow animation */
-  }
-  
-  .about-right {
-    flex: 1;
-    text-align: left;
-    animation: fadeIn 1s ease-in; /* Fade-in animation */
-  }
-  
-  .about-heading {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: rgb(0, 189, 192)/* Heading color */
-  }
-  
   .education {
-    margin-top: 20px;
+    margin-top: 15px; 
+    padding-right: 2rem;
   }
-  
+
   .education ul {
-    list-style-type: none;
-    padding: 0;
+    /* padding: 0; */
+    text-align:center;
+    width: 100%; /* Center the text on smaller screens */
   }
-  
+
   .education li {
-    margin-bottom: 15px;
-    font-size: 1rem;
+    margin-bottom: 20px; /* Reduce space between items */
+    font-size: 1rem; /* Slightly smaller font size for better fit */
+    line-height: 1.8; /* Adjust line-height for better readability */
+    max-width: 100%; /* Ensure full width usage on small screens */
   }
-  
-  /* Animations */
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  
-  @keyframes slideIn {
-    from {
-      transform: translateY(20px);
-      opacity: 0;
-    }
-    to {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
-  
-  @keyframes grow {
-    from {
-      height: 0;
-    }
-    to {
-      height: 200px; /* Final height */
-    }
-  }
-  
+}

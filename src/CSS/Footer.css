@@ -1,0 +1,97 @@
+#footer {
+    position: relative;
+    width: 100%;
+    color: #FFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+    font-family: sans-serif;
+    /* border-top: 1px solid rgb(216, 215, 215); */
+
+  }
+  
+  #footer h1 {
+    font-size: 4rem; /* Big portfolio name */
+    text-align: center;
+    margin-bottom: 0.5rem;
+    
+  }
+  
+  #footer hr {
+    width: 90%;
+    border: 0;
+    border-top: 2px solid #1fd2a3; /* Underline below the name */
+    margin-bottom: 1rem;
+  }
+  
+  .footer-bottom-text {
+    text-align: center;
+    font-size: 1rem; /* Copyright text size */
+    margin-bottom: 1rem; /* Add spacing below the copyright */
+  }
+  
+  .built-with {
+    /* display: flex;
+    align-items: center; */
+    text-align: center;
+    font-size: 1.2rem;
+  }
+  
+  .built-with span {
+    margin-right: 10px; /* Space between 'Built With' and the icon */
+  }
+  
+  @keyframes rotate360 {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  
+  .react-icon {
+    color: #61DBFB; /* React's official color */
+    font-size: 2rem; /* Size of the React icon */
+    animation: rotate360 3s linear infinite;
+  }
+  
+  .react-icon:hover {
+    color: #fff;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    #footer h1 {
+      font-size: 2.5rem;
+    }
+  
+    .footer-bottom-text {
+      font-size: 0.9rem;
+    }
+  
+    .react-icon {
+      font-size: 1.5rem;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    #footer h1 {
+      font-size: 2rem;
+    }
+  
+    .footer-bottom-text {
+      font-size: 0.8rem;
+    }
+  
+    .built-with {
+      flex-direction: column;
+    }
+  
+    .react-icon {
+      font-size: 1.5rem;
+    }
+  }
+  

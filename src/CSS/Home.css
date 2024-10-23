@@ -1,155 +1,195 @@
-/* src/Home.css */
-
-/* General Styles */
 /* src/CSS/Home.css */
+.home-title {
+  font-size: 2rem; /* Adjust as needed */
+}
 
+.home-name {
+  margin-top: -2.3rem;
+}
+.home-text {
+  width: 60%;
+  margin: 4rem;
+}
+
+.typewrite {
+  font-size: 1.5rem;
+  display: flex;
+  margin-top: -1.9rem;
+}
+
+.home-typing{
+  color:red;
+}
+
+.home-skills {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.large-name {
+  font-size: 5rem; /* Make NIRAJ SABRE larger */
+  font-weight: bold; /* Add bold styling */
+  color: #1fd2a3; /* Match the color scheme */
+}
+
+.additional-info {
+  font-size: 1rem; /* Adjust as needed */
+}
+
+
+
+.moving-circle {
+  position: absolute;
+  border-radius: 50%;
+  background-color: rgba(31, 210, 163, 0.7); /* Blurry color */
+  animation: move 10s infinite linear; /* Add animation */
+  z-index: -10;
+  filter: blur(4rem); /* Adjust blur radius here */
+}
+
+.top-right {
+  width: 100px; /* Size of the circle */
+  height: 100px; /* Size of the circle */
+  top: 10%; /* Position at the top right */
+  right: 10%;
+}
+
+.bottom-left {
+  width: 120px; /* Size of the circle */
+  height: 120px; /* Size of the circle */
+  bottom: 10%; /* Position at the bottom left */
+  left: 10%;
+}
+
+@keyframes move {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-20px, 20px); /* Change as needed for movement */
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+/* Skills section styling */
 .home-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2rem;
-  }
-  
-  .home-text {
-    flex: 1;
-    max-width: 700px; /* Limiting width for the text */
-  }
-  
+  display: grid;
+  gap: 0;
+}
+
+.additional-info {
+  flex-basis: 40%; /* Adjust width as needed */
+  margin-left: 60px;
+  font-size: 1rem; /* Space between skills and additional info */
+}
+
+.skills-title {
+  font-size: 1.5rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(11, 1fr); /* Change as needed */
+  gap: 15px;
+  margin-right: 20px; /* Space between skill items */
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff; /* Skill text color */
+  transition: transform 0.3s; /* Hover effect */
+}
+
+.skill-item:hover {
+  transform: scale(1.1); /* Scale on hover */
+}
+
+.skill-icon {
+  font-size: 1.7rem; /* Size of icons */
+  margin-bottom: 3px; /* Space between icon and text */
+}
+
+/* Adjust for responsiveness */
+@media (max-width: 768px) {
   .home-title {
-    font-size: 2.5rem; /* Increase title size */
-  }
-  
-  .home-name {
-    font-size: 5rem; /* Name size */
-    font-weight: bold;
-    color: #007acc; /* Highlight color for the name */
-  }
-  
-  .home-typing {
-    font-size: 1.5rem; /* Typing effect text size */
-  }
-  
-  .home-skills {
-    flex: 1;
-    max-width: 500px; /* Limiting width for the skills section */
-    margin-left: 1rem; /* Space between text and skills */
-  }
-  
-  .skills-title {
-    font-size: 1.8rem; /* Skills title size */
-    margin-bottom: 1rem;
-  }
-  
-  .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Responsive grid */
-    gap: 1rem; /* Space between grid items */
-  }
-  
-  .skill-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center items */
-    padding: 1rem;
-    transition: transform 0.2s; /* Transition for hover effect */
-  }
-  
-  .skill-item:hover {
-    transform: translateY(-5px); /* Lift effect on hover */
-  }
-  
-  .skill-icon {
-    font-size: 2rem; /* Icon size */
-    color: #007acc; /* Icon color */
-    margin-bottom: 0.5rem;
-  }
-  
-  .skill-name {
-    font-size: 1rem; /* Font size for skill name */
-    color: #555; /* Color for skill name */
-    text-align: center; /* Center align text */
-  }
-  
-  
-  @media (min-width: 768px) {
-    .home-container {
-      flex-direction: row;
-      justify-content: space-between;
-    }
-  }
-  
-  /* Text Section Styles */
-  .home-text {
-    text-align: center;
-    margin-bottom: 50px;
-  }
-  
-  @media (min-width: 768px) {
-    .home-text {
-      text-align: left;
-    }
-  }
-  
-  .home-title {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  .home-name {
-    font-size: 2rem;
-    font-weight: 600;
-    margin-bottom: 20px;
-  }
-  
-  .home-typing {
-    font-size: 1.5rem;
-    color: #cc0000;
-  }
-  
-  /* Skills Section Styles */
-  .home-skills {
+    font-size: 1.5rem; /* Smaller title on mobile */
     text-align: center;
   }
-  
-  .skills-title {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 20px;
+
+  .home-name {
+    margin-top: -1.5rem; /* Adjust margin for smaller screens */
+    text-align: center; /* Center name on mobile */
   }
-  
+
+  .home-text {
+    width: 90%; /* Adjust width to fit mobile */
+    margin: 2rem auto;
+    margin-top: 4rem; /* Center and reduce margin for mobile */
+  }
+
+  .typewrite {
+    font-size: 1.2rem;
+    margin-top: -1.2rem;
+    justify-content: center;
+    text-align: center; /* Align text in the center */
+    display: inline-block; /* Ensure inline alignment */
+    width: 100%; /* Make sure it spans full width */
+  }
+
+  .large-name {
+    font-size: 2.5rem; /* Adjusted name size for mobile */
+  }
+
+  .additional-info {
+    font-size: 0.9rem; /* Smaller text for mobile */
+    margin-left: 0; /* Remove left margin */
+    text-align: center; /* Center additional info */
+  }
+
+  .home-skills {
+    flex-direction: column; /* Stack skills vertically on mobile */
+    align-items: center; /* Center align the skills */
+    margin: 60px 0;
+  }
+
   .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    display: flex; /* Use flexbox to align in a row */
+    justify-content: space-around; /* Space between the icons */
+    flex-wrap: nowrap; /* Prevent wrapping into multiple lines */
+    gap: 7px; /* Space between icons */
+    width: 100%; /* Full width */
+    margin: 10px auto; /* Center the grid */
   }
-  
-  @media (min-width: 768px) {
-    .skills-grid {
-      grid-template-columns: repeat(4, 1fr);
-    }
-  }
-  
+
+
   .skill-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transition: transform 0.3s ease-in-out;
+    font-size: 1rem; /* Adjust font size for mobile */
   }
-  
-  .skill-item:hover {
-    transform: scale(1.1);
-  }
-  
+
   .skill-icon {
-    font-size: 3rem;
-    color: #e98400;
-    margin-bottom: 10px;
+    font-size: 1.4rem; /* Smaller icons on mobile */
+  }
+
+  .moving-circle {
+    width: 80px; /* Smaller circles for mobile */
+    height: 80px;
+    filter: blur(2rem); /* Adjust blur for smaller screens */
   }
   
-  .skill-name {
-    font-size: 1rem;
-    color: #555;
+  .top-right {
+    top: 5%; /* Adjust position for mobile */
+    right: 5%;
   }
-  
+
+  .bottom-left {
+    bottom: 5%; /* Adjust position for mobile */
+    left: 5%;
+  }
+}

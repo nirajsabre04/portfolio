@@ -1,19 +1,21 @@
 // src/About.jsx
 import React from 'react';
 import '../CSS/About.css'; // Import the CSS file
+import DP from '../Dp.svg'
 
 const About = () => {
   return (
     <div className="about-container" id='about'>
       {/* Left Side: Image and Description */}
       <div className="about-left">
+      <h2 className="about-heading">About Me</h2>
         <img
-          src="path/to/your/image.jpg" // Replace with your image path
+          src={DP} // Replace with your image path
           alt="Niraj Sabre"
           className="about-image"
         />
         <p className="about-description">
-          I am a passionate developer with a keen interest in web technologies and a strong foundation in both frontend and backend development. Currently pursuing my Master's in Computer Applications, I thrive on solving challenging problems and continuously improving my skills.
+        I am a passionate web developer with expertise in frontend development and a solid understanding of backend technologies. Currently working at Sapalogy Pvt Ltd, I excel in creating dynamic, responsive websites and continuously strive to enhance my skills. I enjoy tackling complex challenges and staying up-to-date with the latest web technologies to deliver high-quality solutions.
         </p>
       </div>
 
@@ -22,22 +24,22 @@ const About = () => {
 
       {/* Right Side: Education Details */}
       <div className="about-right">
-        <h2 className="about-heading">About Me</h2>
+      
         <div className="education">
           <h3>Education</h3>
           <ul>
             <li>
-              <strong>Bachelors in Technology (B. Tech)</strong><br />
+              <strong>Bachelors in Technology (B. Tech) AI & DS</strong><br />
               Priyadarshini College of Engineering Nagpur, 2020-2024 (85%)
 
             </li>
             <li>
-              <strong>Bachelor of Science (B.Sc) in Information Technology</strong><br />
-              Gondwana University, 2019 - 2022
+              <strong>Higher Secondary Certificate (HSC) Science</strong><br />
+              Shri Mathuradas Mohota College Nagpur, 2018-2020 (72.46%)
             </li>
             <li>
-              <strong>Higher Secondary Certificate (HSC)</strong><br />
-              Nagpur Divisional Board, 2017 - 2019
+              <strong>Secondary School Certificate (SSC)</strong><br />
+              Pandit Bachharaj Vyas Vidyalaya Nagpur, 2017-2018 (94%)
             </li>
           </ul>
         </div>

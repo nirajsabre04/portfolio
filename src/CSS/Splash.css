@@ -1,0 +1,118 @@
+/* Ensure body and html take full height */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+#splash-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(50px);
+  background: linear-gradient(270deg, #1fd2a3, hsl(0, 0%, 0%), #02504c, #000000);
+  background-size: 800% 800%; /* Create a large background to allow smooth animation */
+  animation: colorShift 10s ease infinite, fadeOut 1s forwards 3s; /* Color shift and fade out */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  overflow: hidden; /* Ensure content doesn't overflow */
+}
+
+.splash-text {
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 2em;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+#text1 {
+  animation-delay: 0.5s; /* Delay for first text (NIRAJ'S) */
+}
+
+#text2 {
+  animation-delay: 1.5s; /* Delay for second text (PORTFOLIO) */
+}
+#text3 {
+  animation-delay: 2.5s; /* Delay for second text (PORTFOLIO) */
+}
+
+#main-content {
+  display: none; /* Hide main content initially */
+  opacity: 0;
+  height: 100vh;
+  overflow: auto; /* Allow scrolling when content is shown */
+}
+
+.show-content {
+  display: block; /* Show the content when splash is hidden */
+  animation: slideIn 1s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes colorShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Mobile optimization */
+@media (max-width: 768px) {
+  #splash-screen {
+    padding-left: 13rem;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+  }
+
+  .splash-text {
+    font-size: 2rem;
+    line-height: 1.2;
+    text-align: center;
+    margin-right: 25rem; /* Ensure text is centered */
+  }
+
+  #text2 {
+    font-size: 2rem;
+  }
+
+  #main-content {
+    height: auto;
+    overflow: visible;
+  }
+}
