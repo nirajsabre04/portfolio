@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import '../CSS/Navbar.css'; // Import the CSS file
-import Spider from '../spider.png'
-import Logo from '../Logo.png'
+import React, { useState } from "react";
+import "../CSS/Navbar.css"; // Import the CSS file
+import Spider from "../spider.png";
+import Logo from "../Logo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,30 +19,51 @@ const Navbar = () => {
     <nav className="navbar">
       {/* Wrap the logo in an anchor tag */}
       <div className="navbar__logo" onClick={handleLinkClick}>
-       <img className='spider' src={Logo}/>
+        <img className="spider" src={Logo} />
       </div>
-      
+
       {/* Hamburger Menu for Mobile */}
       <div className="hamburger" onClick={toggleMenu}>
         <div></div>
         <div></div>
         <div></div>
       </div>
-      
+
       {/* Navigation Links */}
-      <ul className={`navbar__links ${isOpen ? 'active' : ''}`}>
-        <li><a href="#home" onClick={handleLinkClick}>Home</a></li>
-        <li><a href="#about" onClick={handleLinkClick}>About</a></li>
-        <li><a href="#project" onClick={handleLinkClick}>Project</a></li>
-        <li><a href="#contact" onClick={handleLinkClick}>Contact</a></li>
+      <ul className={`navbar__links ${isOpen ? "active" : ""}`}>
         <li>
-          <a href="/path-to-your-resume.pdf" className="resume-button" download onClick={handleLinkClick}>
+          <a href="#home" onClick={handleLinkClick}>
+            Home
+          </a>
+        </li>
+        <li>
+          <a href="#about" onClick={handleLinkClick}>
+            About
+          </a>
+        </li>
+        <li>
+          <a href="#project" onClick={handleLinkClick}>
+            Project
+          </a>
+        </li>
+        <li>
+          <a href="#contact" onClick={handleLinkClick}>
+            Contact
+          </a>
+        </li>
+        <li>
+          <a
+            href="/Niraj-Resume.pdf"
+            className="resume-button"
+            download
+            onClick={handleLinkClick}
+          >
             Resume
           </a>
         </li>
       </ul>
     </nav>
   );
-}
+};
 
 export default Navbar;

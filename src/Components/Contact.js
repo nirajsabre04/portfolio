@@ -83,7 +83,7 @@ export default function Contact() {
             </a>
           </div>
           <div className="resume-download">
-            <a href="/resume.pdf" download className="contact-resume-button">
+            <a href="/Niraj-Resume.pdf" download className="contact-resume-button">
               <FaDownload /> Download Resume
             </a>
           </div>
